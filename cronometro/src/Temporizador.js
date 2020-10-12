@@ -21,7 +21,7 @@ function App() {
             const minutos = Math.floor(distancia % (1000 * 60 * 60) / (1000 * 60));
             const segundos = Math.floor(distancia % (1000 * 60) / 1000);
 
-            if(distancia > 0) {
+            if(distancia < 0) {
                 // Parar o temporizador
                 clearInterval(intervaloTemporizador.current);
             } else {
