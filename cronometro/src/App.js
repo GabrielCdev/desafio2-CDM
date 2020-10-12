@@ -14,7 +14,7 @@ function App() {
   const iniciar = () => {
     run();
     setStatus(1);
-    setInterv(setInterval(run, 1));
+    setInterv(setInterval(run, 10)); // Tem que verificar esse valor...
   };
   
   var atualizaCs = time.cs, atualizaMs = time.ms, atualizaS = time.s, atualizaM = time.m, atualizaH = time.h;
@@ -35,7 +35,7 @@ function App() {
       atualizaMs = 0;
     }
 
-    if(atualizaCs === 1) {
+    if(atualizaCs === 100) { // Verificar esse valor, que corresponde aos centésimos de segundo!!!
       atualizaMs++;
       atualizaCs = 0;
     }
