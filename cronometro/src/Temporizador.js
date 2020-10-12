@@ -53,7 +53,7 @@ function App() {
                 <div>
                     <section>
                         <p>{timerDias}</p>
-                        <p><small>Days</small></p>
+                        <p><small>Dias</small></p>
                     </section>
                     <span>:</span>
 
