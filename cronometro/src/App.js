@@ -18,7 +18,7 @@ function App() {
   };
 
   var atualizaCs = time.cs, atualizaMs = time.ms, atualizaS = time.s, atualizaM = time.m, atualizaH = time.h;
-  
+
   const run = () => {
     if(atualizaM === 60) {
       atualizaH++;
