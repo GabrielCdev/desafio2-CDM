@@ -1,97 +1,96 @@
 * {
-  padding: 0px;
-  margin: 0px;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-
+  
 body {
-  background: #2C3E50;
+    font-family: 'montseratt', sans-serif;
 }
 
-.App-header {
-  background: transparent;
-  max-width: 600px;
-  width: 90%;
-  height: 500px;
-  margin: 30px auto;
+.app {
+    background-image: url('./assets/cold-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    transition: 0.4 ease;
 }
 
-.clock-holder {
-  width: 100%;
-  background: #fff;
-  margin: 30px auto;
-  position: relative;
+.app.warm {
+    background-image: url('./assets/warm-bg.jpg');
+    background-position: center;
 }
 
-.cronometro {
-  padding: 60px 0px;
-  text-align: center;
+main {
+    min-height: 100vh;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.75));
+    padding: 25px;
 }
 
-.cronometro span {
-  background: #00ABA9;
-  color: #fff;
-  display: inline-block;
-  font-family: monospace;
-  font-size: 22px;
-  padding: 20px;
-  border-radius: 5px;
-  width: 70px;
+.search-box {
+    width: 100%;
+    margin: 0 0 75px;
 }
 
-.cronometro .cronometro-btn {
-  background: #fff;
-  margin-top: 30px;
-  margin-left: 5px;
-  border: none;
-  padding: 12px 20px;
-  font-size: 16px;
-  text-transform: uppercase;
-  width: 150px;
-  transition: background 1s;
-  cursor: pointer;
+.search-box .search-bar {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    appearance: none;
+    background: none;
+    border: none;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 0px 0px 16px 16px;
+    margin-top: -25px;
+    box-shadow: 0px 5px rgba(0, 0, 0, 0.2);
+    color: #313131;
+    font-size: 20px;
+    transition: 0.4s ease;
 }
 
-.cronometro .cronometro-btn-red {
-  border: 2px solid #C85454;
-  color: #C85454;
+.search-box .search-bar:focus {
+    background-color: rgba(255, 255, 255, 0.75);
 }
 
-.cronometro .cronometro-btn-blue {
-  border: 2px solid #322964;
-  color: #322964;
+.location-box .location {
+    color: #FFF;
+    font-size: 32px;
+    font-weight: 500;
+    text-align: center;
+    text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
 }
 
-.cronometro .cronometro-btn-yellow {
-  border: 2px solid #FFC900;
-  color: #FFC900;
+.location-box .date {
+    color: #FFF;
+    font-size: 20px;
+    font-weight: 300;
+    font-style: italic;
+    text-align: center;
+    text-shadow: 2px 2px rgba(50, 50, 70, 0.5);
 }
 
-.cronometro .cronometro-btn-green {
-  border: 2px solid #00ABA9;
-  color: #00ABA9;
+.weather-box {
+    text-align: center;
 }
 
-.cronometro .cronometro-btn-red:hover {
-  background: #C85454;
-  border: 2px solid #C85454;
-  color: #fff;
+.weather-box .temp {
+    position: relative;
+    display: inline-block;
+    margin: 30px auto;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;  
+    padding: 15px 25px;
+    color: #FFF;
+    font-size: 102px;
+    font-weight: 900;
+    text-shadow: 3px 6px rgba(50, 50, 70, 0.5);
+    text-align: center;
+    box-shadow: 3px 6px rgba(0, 0, 0, 0.2);
 }
 
-.cronometro .cronometro-btn-blue:hover {
-  background: #322964;
-  border: 2px solid #322964;
-  color: #fff;
-}
-
-.cronometro .cronometro-btn-yellow:hover {
-  background: #FFC900;
-  border: 2px solid #FFC900;
-  color: #fff;
-}
-
-.cronometro .cronometro-btn-green:hover {
-  background: #00ABA9;
-  border: 2px solid #00ABA9;
-  color: #fff;
+.weather-box .weather {
+    color: #FFF;
+    font-size: 48px;
+    font-weight: 700;
+    text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
 }

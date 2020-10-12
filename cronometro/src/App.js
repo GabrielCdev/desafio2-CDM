@@ -1,77 +1,66 @@
 import React, { useState } from 'react';
-import DisplayComponent from './Components/DisplayComponent';
-import BtnComponent from './Components/BtnComponent';
-import './App.css';
+const api = {
+  key: "7d4c17ba2a2731a5c764bcce6ad18232",
+  base: "https://api.openweathermap.org/data/2.5/"
+}
 
 function App() {
-  const [time, setTime] = useState({cs:0, ms:0, s:0, m:0, h:0});
-  const [interv, setInterv] = useState();
-  const [status, setStatus] = useState(0);
-  // Não iniciado = 0
-  // Iniciado = 1
-  // Parado = 2
-  const [parcial, setParcial] = useState(3);
-  // Parcial = 3
-  
-  const iniciar = () => {
-    run();
-    setStatus(1);
-    setInterv(setInterval(run, 1)); // Verificar esse valor
-  };
+  const [query, setQuery] = useState('');
+  const [weather, setWeather] = useState({});
 
-  var atualizaCs = time.cs, atualizaMs = time.ms, atualizaS = time.s, atualizaM = time.m, atualizaH = time.h;
-
-  const run = () => {
-    if(atualizaM === 60) {
-      atualizaH++;
-      atualizaM = 0;
+  const search = evt => {
+    if (evt.key === "Enter") {
+      fetch(`${api.base}weather?q=${query}&units=metric&APPID=${api.key}`)
+        .then(res => res.json())
+        .then(result => {
+          setWeather(result);
+          setQuery('');
+          console.log(result);
+        });
     }
+  }
 
-    if(atualizaS === 60) {
-      atualizaM++;
-      atualizaS = 0;
-    }
+  const dateBuilder = (d) => {
+    let months = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
+    let days = ["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"];
 
-    if(atualizaMs === 100) {
-      atualizaS++;
-      atualizaMs = 0;
-    }
+    let day = days[d.getDay()];
+    let date = d.getDate();
+    let month = months[d.getMonth()];
+    let year = d.getFullYear();
+    let time = new Date().toLocaleTimeString();
 
-    if(atualizaCs === 100) { // Verificar esse valor, que corresponde aos centésimos de segundo!!!
-      atualizaMs++;
-      atualizaCs = 0;
-    }
-
-    atualizaCs++;
-    return setTime({cs:atualizaCs, ms:atualizaMs, s:atualizaS, m:atualizaM, h:atualizaH});
-  };
-
-  const parar = () => {
-    clearInterval(interv);
-    setStatus(2);
-  };
-
-  const zerar = () => {
-    clearInterval(interv);
-    setStatus(0);
-    setTime({cs:0, ms:0, s:0, m:0, h:0});
-  };
-
-  const retomar = () => iniciar();
-
-  const tempoParcial = () => { 
-    setStatus(3);
-    setParcial([...parcial, time]);
-  };
+    return `${day}, ${date} ${month} ${year}. ${time}`
+  }
 
   return (
-    <div className="App-header">
-        <div className="clock-holder">
-            <div className="cronometro">
-              <DisplayComponent time={time}/>
-              <BtnComponent status={status} retomar={retomar} zerar={zerar} parar={parar} iniciar={iniciar}/>
-            </div>
+    <div className={(typeof weather.main != "undefined") ? ((weather.main.temp > 16) ? 'app warm' : 'app') : 'app'}>
+      <main>
+        <div className="search-box">
+          <input 
+            type="text"
+            className="search-bar"
+            placeholder="Insira a cidade desejada. Ex: Salvador, BR"
+            onChange={e => setQuery(e.target.value)}
+            value={query}
+            onKeyPress={search}
+          />
         </div>
+        {(typeof weather.main != "undefined") ? (
+        <div>
+          <div className="location-box">
+            <div className="location">{weather.name}, {weather.sys.country}</div>
+            <div className="date">{dateBuilder(new Date())}</div>
+          </div>
+          <div className="weather-box">
+            <div className="temp">
+              {Math.round(weather.main.temp)}°C
+            </div>
+            <div className="weather">{weather.weather[0].main}</div>
+          </div>
+        </div>
+        ) : ('')}
+      </main>
     </div>
   );
 }
