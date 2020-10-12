@@ -10,7 +10,7 @@ function App() {
     let intervaloTemporizador = useRef();
 
     const iniciarTemporizador = () => {
-        const dataTemporizador = new Date(' 30, 2020 00:00:00').getTime();
+        const dataTemporizador = new Date(' 10, 13 2020 00:00:00').getTime();
 
         intervaloTemporizador = setInterval(() => {
             const atual = new Date().getTime();
