@@ -10,6 +10,8 @@ function App() {
   // Não iniciado = 0
   // Iniciado = 1
   // Parado = 2
+  const [parcial, setParcial] = useState(3);
+  // Parcial = 3
   
   const iniciar = () => {
     run();
@@ -56,6 +58,11 @@ function App() {
   };
 
   const retomar = () => iniciar();
+
+  const tempoParcial = () => { 
+    setStatus(3);
+    setParcial([...parcial, time]);
+  };
 
   return (
     <div className="App-header">
