@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import DisplayComponent from './Components/DisplayComponent';
 import BtnComponent from './Components/BtnComponent';
 import './App.css';
@@ -14,9 +14,9 @@ function App() {
   const iniciar = () => {
     run();
     setStatus(1);
-    setInterv(setInterval(run, 10)); // Tem que verificar esse valor...
+    setInterv(setInterval(run, 1)); // Verificar esse valor
   };
-  
+
   var atualizaCs = time.cs, atualizaMs = time.ms, atualizaS = time.s, atualizaM = time.m, atualizaH = time.h;
   
   const run = () => {

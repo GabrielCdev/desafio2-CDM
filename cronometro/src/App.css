@@ -57,6 +57,11 @@ body {
   color: #C85454;
 }
 
+.cronometro .cronometro-btn-blue {
+  border: 2px solid #322964;
+  color: #322964;
+}
+
 .cronometro .cronometro-btn-yellow {
   border: 2px solid #FFC900;
   color: #FFC900;
@@ -70,6 +75,12 @@ body {
 .cronometro .cronometro-btn-red:hover {
   background: #C85454;
   border: 2px solid #C85454;
+  color: #fff;
+}
+
+.cronometro .cronometro-btn-blue:hover {
+  background: #322964;
+  border: 2px solid #322964;
   color: #fff;
 }
 
