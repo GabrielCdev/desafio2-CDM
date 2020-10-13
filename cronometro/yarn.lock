@@ -2960,6 +2960,11 @@ cliui@^5.0.0:
     strip-ansi "^5.2.0"
     wrap-ansi "^5.1.0"
 
+clock@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/clock/-/clock-1.0.2.tgz#716ee41586d18f0263e1bb1a5f4c4433e094e6f9"
+  integrity sha512-IfZHm4xXgHCij1NgGkE8IeoP3/WVV3tVXciaWkZTqbzPtG4JD9cET0a/LNcclVJfqgXyhgPwoRdDp5glvS/lIQ==
+
 clone-deep@^0.2.4:
   version "0.2.4"
   resolved "https://registry.yarnpkg.com/clone-deep/-/clone-deep-0.2.4.tgz#4e73dd09e9fb971cc38670c5dced9c1896481cc6"

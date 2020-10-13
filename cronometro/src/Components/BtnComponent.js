@@ -9,7 +9,7 @@ function BtnComponent(props) {
 
       {(props.status === 1) ? 
         <div>
-          <button className="cronometro-btn cronometro-btn-blue" onClick={props.parcial}>Parcial</button>
+          <button className="cronometro-btn cronometro-btn-blue" onClick={props.tempoParcial}>Parcial</button>
           <button className="cronometro-btn cronometro-btn-red" onClick={props.parar}>Parar</button>
         </div> : ""
       }
