@@ -40,9 +40,11 @@ export default class Clock extends Component {
                 <span className="nome-cidade">
                     {this.props.name}
                 </span>
-                <button onClick={(e) => this.props.onDelete(this.props.id)}>
-                    Remove clock
-                </button>
+                <br />
+                <br />
+                <button className="Remover" onClick={(e) => this.props.onDelete(this.props.id)}>Remover relógio</button>
+                <br />
+                <br />
             </div>
         )
     }

@@ -34,7 +34,7 @@ class App extends Component {
 
     addClock() {
         const name = prompt('Nome do relógio?');
-        const timezone = prompt('Fuso horário?');
+        const timezone = prompt('Fuso horário? https://momentjs.com/timezone/');
         const clock = {
             name: name,
             timezone: timezone,
@@ -50,7 +50,7 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-                <h1> Horário Mundial</h1>
+                <h1>Relógio Mundial</h1>
                 {this.state.clocks.map(clock => {
                     console.log(clock);
                     return <Clock
@@ -59,9 +59,7 @@ class App extends Component {
                         onDelete={this.deleteClock}
                     />    
                 })}
-                <button onClick={(e) => this.addClock()}>
-                    + Add Clock
-                </button>
+                <button className="Adicionar" onClick={(e) => this.addClock()}>Adicionar relógio</button>
             </div>
         );
     }
