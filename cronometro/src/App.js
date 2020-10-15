@@ -3,6 +3,8 @@ import Contador from './Contador'
 import Botao from './Botao'
 import LabelRelogio from './LabelRelogio'
 import './App.css';
+import Temporizador from './Temporizador'
+import WorldClock from './WorldClock'
 
 class App extends React.Component {
   constructor(props){
@@ -122,13 +124,25 @@ class App extends React.Component {
 
   render(){
     return (
-      <div>
-        <Contador horas={this.state.horas} minutos={this.state.minutos} segundos={this.state.segundos} centesimos={this.state.centesimos} />
-        <LabelRelogio name={this.state.name} />
-        <Botao onClick={() => this.zerarCronometro()} label={"Zerar"} />
-        <Botao onClick={() => this.pararTempo()} label={this.state.nameStop} />
-        <Botao onClick={() => this.parcial()} label={"Pacial"} />
-        <LabelRelogio name={this.state.parcial} />
+      <div className="container">
+        <div className="timer">
+          <div className="espaco">
+            <Contador horas={this.state.horas} minutos={this.state.minutos} segundos={this.state.segundos} centesimos={this.state.centesimos} />
+            <LabelRelogio name={this.state.name} />
+            <Botao onClick={() => this.zerarCronometro()} label={"Zerar"} />
+            <Botao onClick={() => this.pararTempo()} label={this.state.nameStop} />
+            <Botao onClick={() => this.parcial()} label={"Parcial"} />
+            <LabelRelogio name={this.state.parcial} />
+          </div>
+        </div>
+
+        <div className="v-separator2">
+          <Temporizador />
+        </div>
+
+        <div className="v-separator3">
+          <WorldClock />
+        </div>
       </div>
     );
   }

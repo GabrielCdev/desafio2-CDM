@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import './WorldClock.css';
 import Clock from './Clock';
 
 const clocks = [];
@@ -13,7 +13,7 @@ for(let i = 0; i < num; i++) {
     })
 }
 
-class App extends Component {
+class WorldClock extends Component {
     constructor() {
         super();
         this.deleteClock = this.deleteClock.bind(this);
@@ -65,4 +65,4 @@ class App extends Component {
     }
 }
 
-export default App;
+export default WorldClock;

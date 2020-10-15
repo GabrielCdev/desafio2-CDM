@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import Countdown from "./Components/Countdown";
+import Countdown from "./components/Countdown";
 
-class App extends Component {
+class Temporizador extends Component {
   render() {
     return (
       <div className="App">
@@ -14,4 +14,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Temporizador;
