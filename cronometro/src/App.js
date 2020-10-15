@@ -124,6 +124,7 @@ class App extends React.Component {
 
   render(){
     return (
+<<<<<<< HEAD
       <div className="container">
         <div className="timer">
           <div className="espaco">
@@ -142,6 +143,41 @@ class App extends React.Component {
 
         <div className="v-separator3">
           <WorldClock />
+=======
+      <div class="container">
+
+        <div className="timer">
+		      <div className="espaco">
+			    <div className="segunda casa das horas">0 1 2 3 4 5 6 7 8 9</div></div>
+          <div className="espaco">
+			    <div className="primeira casa das horas">0 1 2 3 4 5 6 7 8 9</div></div>
+          <div className="divisor"><div className="numeros">:</div></div>
+          <div className="espaco">
+			    <div className="segunda casa dos minutos">0 1 2 3 4 5 6</div></div>
+          <div className="espaco">
+			    <div className="primeira casa dos minutos">0 1 2 3 4 5 6 7 8 9</div></div>
+          <div className="divisor"><div class="numeros">:</div></div>
+          <div className="espaco">
+			    <div className="segunda casa dos segundos">0 1 2 3 4 5 6</div></div>
+          <div className="espaco">
+			    <div className="primeira casa dos segundos">0 1 2 3 4 5 6 7 8 9</div></div>
+          <div className="divisor"><div class="numeros">:</div></div>
+          <div className="cell">
+			    <div className="decimos de segundos">0 1 2 3 4 5 6 7 8 9</div></div>
+          <div className="cell">
+			    <div className="centesimos de segundos">0 1 2 3 4 5 6 7 8 9</div></div>
+          <div className="cell">
+			    <div className="milesimos de segundos">0 1 2 3 4 5 6 7 8 9</div></div>
+        </div>
+
+        <div>
+          <Contador horas={this.state.horas} minutos={this.state.minutos} segundos={this.state.segundos} centesimos={this.state.centesimos} />
+          <LabelRelogio name={this.state.name} />
+          <Botao onClick={() => this.zerarCronometro()} label={"Zerar"} />
+          <Botao onClick={() => this.pararTempo()} label={this.state.nameStop} />
+          <Botao onClick={() => this.parcial()} label={"Parcial"} />
+          <LabelRelogio name={this.state.parcial} />
+>>>>>>> cde3b896247f3f4a171f0d1808f19fc94d4e17e9
         </div>
       </div>
     );
