@@ -1,0 +1,3 @@
+Para o World Clock funcionar usar o site:
+
+https://momentjs.com/timezone/
