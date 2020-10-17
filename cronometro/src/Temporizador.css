@@ -55,7 +55,7 @@
     font-weight: bold;
 }
   
-button {
+.btn-countdown {
     background-color: #202b33;
     border: solid 1px transparent;
     border-radius: 4px;
@@ -70,7 +70,7 @@ button:hover {
     background-color: #106ba3;
 }
 
-.Stopwatch button {
+.Stopwatch .btn-countdown {
     padding: 12px 32px;
     font-size: 20px;
 }
@@ -86,7 +86,7 @@ button:hover {
     margin-bottom: 20px;
 }
 
-.Countdown-display button {
+.Countdown-display .btn-countdown {
     margin: 0 15px;
     border: solid 1px transparent;
     border-radius: 2px;
@@ -95,7 +95,7 @@ button:hover {
     font-size: 16px;
 }
 
-.Countdown-display button:hover {
+.Countdown-display .btn-countdown:hover {
     background-color: #106ba3;
 }
 

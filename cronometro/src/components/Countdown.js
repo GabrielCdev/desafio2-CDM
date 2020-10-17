@@ -74,17 +74,17 @@ class Countdown extends Component {
                 <div className="Countdown-header">Insira os valores</div>
                 <div className="Countdown-label">Horas : Minutos : Segundos</div>
                 <div className="Countdown-display">
-                    <button onClick={() => this.adjustTimer("incHours")}>&#8679;</button>
-                    <button onClick={() => this.adjustTimer("incMinutes")}>&#8679;</button>
-                    <button onClick={() => this.adjustTimer("incSeconds")}>&#8679;</button>
+                    <button className="btn-countdown" onClick={() => this.adjustTimer("incHours")}>&#8679;</button>
+                    <button className="btn-countdown" onClick={() => this.adjustTimer("incMinutes")}>&#8679;</button>
+                    <button className="btn-countdown" onClick={() => this.adjustTimer("incSeconds")}>&#8679;</button>
                     
                     <div className="Countdown-time">
                         {horas} : {minutos} : {segundos}
                     </div>
 
-                    <button onClick={() => this.adjustTimer("decHours")}>&#8681;</button>
-                    <button onClick={() => this.adjustTimer("decMinutes")}>&#8681;</button>
-                    <button onClick={() => this.adjustTimer("decSeconds")}>&#8681;</button>
+                    <button className="btn-countdown" onClick={() => this.adjustTimer("decHours")}>&#8681;</button>
+                    <button className="btn-countdown" onClick={() => this.adjustTimer("decMinutes")}>&#8681;</button>
+                    <button className="btn-countdown" onClick={() => this.adjustTimer("decSeconds")}>&#8681;</button>
                 </div>
                         
                 {timerOn === false && (timerStart === 0 || timerTime === timerStart) && (<button className="Button-start" onClick={this.startTimer}>Iniciar</button>)}
