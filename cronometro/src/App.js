@@ -22,10 +22,12 @@ class App extends React.Component {
   }
 
    zerarCronometro() {
+      this.state.centesimos = 0
       this.state.segundos = 0
       this.state.minutos = 0
       this.state.horas = 0
       this.state.parcial = ""
+      this.pararTempo();
    }
   
   parcial(){
@@ -39,16 +41,16 @@ class App extends React.Component {
     })
     
     if (this.state.stop)
-      this.state.nameStop = "Stop"
+      this.state.nameStop = "Parar"
     else
-      this.state.nameStop = "Start"
+      this.state.nameStop = "Iniciar"
   }
 
   incrementarCentesimo () {
     if (this.state.stop === false){
       this.setState(
         function (state, props) {
-          if (state.centesimos > 99){
+          if (state.centesimos >= 99){
             this.zerarCentesimos();
             this.incrementarSegundo(state);
           }
