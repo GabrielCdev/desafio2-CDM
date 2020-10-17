@@ -34,7 +34,7 @@ export default class Clock extends Component {
         return (
             <div>
                 {true}
-                <div style={{fontSize: "100px"}}>
+                <div style={{fontSize: "50px"}}>
                     {moment.format('HH:mm:ss')}
                 </div>
                 <span className="nome-cidade">

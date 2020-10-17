@@ -51,7 +51,7 @@
 }
   
 .Countdown-header, .Stopwatch-header {
-    font-size: 40px;
+    font-size: 30px;
     font-weight: bold;
 }
   
@@ -61,7 +61,7 @@
     border-radius: 4px;
     padding: 10px 20px;
     color: #ffffff;
-    font-size: 16px;
+    font-size: 20px;
     margin: 0 5px;
     cursor: pointer;
 }

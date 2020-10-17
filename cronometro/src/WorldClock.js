@@ -40,6 +40,7 @@ class WorldClock extends Component {
             timezone: timezone,
             id: this.state.next_id
         };
+
         const nextClocks = [...this.state.clocks, clock];
         this.setState({
             next_id: this.state.next_id + 1,
@@ -51,14 +52,15 @@ class WorldClock extends Component {
         return (
             <div className="App">
                 <h1>Relógio Mundial</h1>
-                {this.state.clocks.map(clock => {
-                    console.log(clock);
-                    return <Clock
-                        key={clock.id}
-                        {...clock}
-                        onDelete={this.deleteClock}
-                    />    
-                })}
+                    {this.state.clocks.map(clock => {
+                        console.log(clock);
+
+                        return <Clock
+                            key={clock.id}
+                            {...clock}
+                            onDelete={this.deleteClock}
+                        />    
+                    })}
                 <button className="Adicionar" onClick={(e) => this.addClock()}>Adicionar relógio</button>
             </div>
         );

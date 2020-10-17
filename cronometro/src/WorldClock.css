@@ -18,13 +18,13 @@ body {
 }
 
 h1 {
-    font-size: 60px;
+    font-size: 30px;
 }
 
 .nome-cidade {
     color: blue;
     font-family: 'Comic Sans MS';
-    font-size: 40px;
+    font-size: 30px;
 }
 
 button {

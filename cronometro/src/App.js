@@ -16,7 +16,7 @@ class App extends React.Component {
       horas: 0,
       stop: false,
       nameStop: "Stop",
-      name: "Relógio", 
+      name: "Cronômetro", 
       parcial: ""
     };
   }
@@ -129,8 +129,8 @@ class App extends React.Component {
       <div className="container">
         <div className="timer">
           <div className="espaco">
-            <Contador horas={this.state.horas} minutos={this.state.minutos} segundos={this.state.segundos} centesimos={this.state.centesimos} />
             <LabelRelogio name={this.state.name} />
+            <Contador horas={this.state.horas} minutos={this.state.minutos} segundos={this.state.segundos} centesimos={this.state.centesimos} />
             <Botao onClick={() => this.zerarCronometro()} label={"Zerar"} />
             <Botao onClick={() => this.pararTempo()} label={this.state.nameStop} />
             <Botao onClick={() => this.parcial()} label={"Parcial"} />
