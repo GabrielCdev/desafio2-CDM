@@ -1,3 +1,5 @@
+DevTeam: Gabriel Calheiros (029181066) e Guido Gusmão (016161132
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

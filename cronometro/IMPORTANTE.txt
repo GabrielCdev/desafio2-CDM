@@ -1,3 +1,6 @@
 Para o World Clock funcionar usar o site:
 
 https://momentjs.com/timezone/
+
+
+Equipe: Gabriel Calheiros (029181066) e Guido Gusmão (016161132)
