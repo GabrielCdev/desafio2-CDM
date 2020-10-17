@@ -122,7 +122,6 @@ class App extends React.Component {
     this.timer = setInterval(
       () => this.incrementarCentesimo(), 10)
   }
-  
 
   render(){
     return (
