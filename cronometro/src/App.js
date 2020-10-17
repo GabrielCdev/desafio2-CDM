@@ -22,7 +22,6 @@ class App extends React.Component {
   }
 
    zerarCronometro() {
-      this.state.centesimos = -1
       this.state.segundos = 0
       this.state.minutos = 0
       this.state.horas = 0
@@ -37,7 +36,8 @@ class App extends React.Component {
   pararTempo(){
     this.setState({ 
         stop: !this.state.stop 
-      })
+    })
+    
     if (this.state.stop)
       this.state.nameStop = "Stop"
     else
