@@ -32,7 +32,7 @@
 
 .timer {
 	padding: 10px;
-	background: linear-gradient(top, #222, #444);
+	background: linear-gradient(top, white, #444);
 	overflow: hidden;
 	display: inline-block;
 	border: 7px solid #efefef;
